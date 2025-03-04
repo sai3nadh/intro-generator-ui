@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>Generate YouTube Intro</h2>
+  
+    <textarea [(ngModel)]="videoScript" placeholder="Paste your script here..." rows="5"></textarea>
+  
+    <button (click)="generateIntro()" [disabled]="loading">Generate Intro</button>
+  
+    <div *ngIf="loading">Generating intro...</div>
+  
+    <div *ngIf="generatedIntro">
+      <h3>AI-Generated Intro:</h3>
+      <p>{{ generatedIntro }}</p>
+    </div>
+  </div>
+  
